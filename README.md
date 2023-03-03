@@ -46,7 +46,7 @@ https://furima-39010.onrender.com
 | first_name         | string      | null: false               |
 | kana_last_name     | string      | null: false               |
 | kana_first_name    | string      | null: false               |
-| birthday           | date_select | null: false               |
+| birthday           | date        | null: false               |
 
 ### Association
 
@@ -56,17 +56,17 @@ https://furima-39010.onrender.com
 
 ## items テーブル
 
-| Column      | Type              | Options                        |
-| ----------- | ----------------- | ------------------------------ |
-| title       | string            | null: false                    |
-| description | text              | null: false                    |
-| category    | collection_select | null: false                    |
-| condition   | collection_select | null: false                    |
-| ship_fee    | collection_select | null: false                    |
-| ship_from   | collection_select | null: false                    |
-| ship_date   | collection_select | null: false                    |
-| price       | integer           | null: false                    |
-| user        | references        | null: false, foreign_key: true |
+| Column        | Type              | Options                        |
+| ------------- | ----------------- | ------------------------------ |
+| title         | string            | null: false                    |
+| description   | text              | null: false                    |
+| category_id   | integer           | null: false                    |
+| condition_id  | integer           | null: false                    |
+| prefecture_id | integer           | null: false                    |
+| ship_from_id  | integer           | null: false                    |
+| ship_date_id  | integer           | null: false                    |
+| price         | integer           | null: false                    |
+| user          | references        | null: false, foreign_key: true |
 
 ### Association
 
@@ -92,7 +92,7 @@ https://furima-39010.onrender.com
 | Column         | Type              | Options                        |
 | -------------- | ----------------- | ------------------------------ |
 | post_cord      | string            | null: false                    |
-| prefecture     | collection_select | null: false                    |
+| prefecture_id  | integer           | null: false                    |
 | municipalities | string            | null: false                    |
 | address        | string            | null: false                    |
 | building       | string            |                                |
