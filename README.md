@@ -118,4 +118,4 @@ https://furima-39010.onrender.com
 
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/f630ef76d4d6c7e0d6bd8fee5c1acbb0.png)](https://gyazo.com/f630ef76d4d6c7e0d6bd8fee5c1acbb0)
+[![Image from Gyazo](https://i.gyazo.com/64e17256423213106740c0b70abd0162.png)](https://gyazo.com/64e17256423213106740c0b70abd0162)
