@@ -18,8 +18,10 @@ class User < ApplicationRecord
 # 生年月日
   validates :birthday, presence: true
 
+  # アソシエーション　※以下3行はpull request13(ユーザー管理機能)でのチェックは不要です。
   has_many :items
   has_many :orders
   has_many :comments
+  # ここまでチェック不要です。
 
 end
