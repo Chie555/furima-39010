@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    unless @item.user_id == current_user.id #あとで追記 && @item.order.blank?
+    unless @item.user_id == current_user.id && @item.order.blank?
       redirect_to root_path
     end
   end
@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    if @item.user_id == current_user.id #あとで追記 && @item.order.blank?
+    if @item.user_id == current_user.id && @item.order.blank?
       @item.destroy
     end
     redirect_to root_path
