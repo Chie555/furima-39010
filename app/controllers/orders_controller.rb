@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order_payment= OrderPayment.new(order_params)
+    @order_payment = OrderPayment.new(order_params)
     if @order_payment.valid?
       pay_item
       @order_payment.save

@@ -1,4 +1,4 @@
 class Payment < ApplicationRecord
-    # アソシエーション
-    belongs_to :order
+  # アソシエーション
+  belongs_to :order
 end
