@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2023_03_14_061634) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.bigint "Item_id", null: false
-    t.index ["Item_id"], name: "index_orders_on_Item_id"
+    t.bigint "item_id", null: false
+    t.index ["item_id"], name: "index_orders_on_item_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2023_03_14_061634) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "items", "users"
-  add_foreign_key "orders", "Items"
+  add_foreign_key "orders", "items"
   add_foreign_key "orders", "users"
   add_foreign_key "payments", "orders"
 end
