@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe OrderPayment, type: :model do
   before do
-    @order_payment = FactoryBot.build(:order_payment)
+    item = FactoryBot.create(:item)
+    user = FactoryBot.create(:user)
+    @order_payment = FactoryBot.build(:order_payment, item_id: item.id, user_id: user.id)
   end
 
   describe '商品出品' do
