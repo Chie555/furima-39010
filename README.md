@@ -15,9 +15,9 @@ https://furima-39010.onrender.com
 
 ・Basic認証ID： admin
 
-・PAYJP_PUBRIC_KEY：59213395c5f3c7620951a6e31e90f5af
+・PAYJP_PUBRIC_KEY：pk_test_ca497f9e6c2ce9a41b4459cb
 
-・PAYJP_SECRET_KEY：59213395c5f3c7620951a6e31e90f5af
+・PAYJP_SECRET_KEY：sk_test_38db9f1942a7e7323a360789
 
 
 # 利用方法
