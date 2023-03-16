@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :order_item, only: [:index, :create]
 
   def index
-    if user_signed_in? && current_user.id != @item.user_id && @item.order.blank?
+    if current_user.id != @item.user_id && @item.order.blank?
       @order_payment = OrderPayment.new
     else
       redirect_to root_path

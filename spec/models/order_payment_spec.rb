@@ -74,7 +74,12 @@ RSpec.describe OrderPayment, type: :model do
         @order_payment.valid?
         expect(@order_payment.errors.full_messages).to include("Phone number is invalid")
       end
-      it '電話番号が10,11桁以外だと購入できないこと' do
+      it '電話番号が9桁以下だと購入できないこと' do
+        @order_payment.phone_number = '000000000'
+        @order_payment.valid?
+        expect(@order_payment.errors.full_messages).to include("Phone number is invalid")
+      end
+      it '電話番号が12桁以上だと購入できないこと' do
         @order_payment.phone_number = '000000000000'
         @order_payment.valid?
         expect(@order_payment.errors.full_messages).to include("Phone number is invalid")
@@ -83,6 +88,16 @@ RSpec.describe OrderPayment, type: :model do
         @order_payment.phone_number = '０００0000000'
         @order_payment.valid?
         expect(@order_payment.errors.full_messages).to include("Phone number is invalid")
+      end
+      it 'userが紐付いていなければ購入できない' do
+        @order_payment.user_id = ''
+        @order_payment.valid?
+        expect(@order_payment.errors.full_messages).to include("User can't be blank")
+      end
+      it 'itemが紐付いていなければ購入できない' do
+        @order_payment.item_id = ''
+        @order_payment.valid?
+        expect(@order_payment.errors.full_messages).to include("Item can't be blank")
       end
     end
   end
