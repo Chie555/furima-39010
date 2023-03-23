@@ -39,7 +39,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # set :ssh_options, verify_host_key: :secure
 
 
-lock '3.1'
+lock '3.17.2'
 
 set :application, 'furima-39010'
 
